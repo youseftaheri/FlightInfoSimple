@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.MainActivity"
+    android:id="@+id/root">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:text="@string/origin_destination"
+                android:textSize="@dimen/_12sdp" />
+
+            <LinearLayout
+                style="@style/formOuterLinearLayout"
+                android:layout_marginTop="@dimen/_30sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/origin" />
+                <LinearLayout style="@style/formInnerLinearLayout">
+                    <TextView
+                        style="@style/formHintTextView"
+                        android:text="@string/origin" />
+                    <AutoCompleteTextView
+                        android:id="@+id/etOrigin"
+                        android:ems="10"
+                        style="@style/formEditText"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/ivClearOrigin"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_close_icon"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+
+            <View style="@style/formLineView" />
+
+            <LinearLayout
+                style="@style/formOuterLinearLayout"
+                android:layout_marginTop="@dimen/_30sdp">
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/destination" />
+                <LinearLayout style="@style/formInnerLinearLayout">
+                    <TextView
+                        style="@style/formHintTextView"
+                        android:text="@string/destination" />
+                    <AutoCompleteTextView
+                        android:id="@+id/etDestination"
+                        android:ems="10"
+                        style="@style/formEditText"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/ivClearDestination"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_close_icon"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+
+            <View style="@style/formLineView" />
+
+            <Button
+                android:id="@+id/btShowSchedules"
+                style="@style/defaultButton"
+                android:text="@string/search"
+                android:layout_marginTop="@dimen/_20sdp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

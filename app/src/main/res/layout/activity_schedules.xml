@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SchedulesActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/_1sdp">
+        <TextView
+            android:id="@+id/tvOrigin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:text="@string/origin"
+            android:textAlignment="center"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/colorGrayDark"
+            android:textSize="@dimen/_11sdp" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/plane_2"
+            android:contentDescription="@string/app_name" />
+        <TextView
+            android:id="@+id/tvDestination"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:text="@string/destination"
+            android:textAlignment="center"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/colorGrayDark"
+            android:textSize="@dimen/_11sdp"/>
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:visibility="visible"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/btBack"
+        style="@style/defaultButton_map"
+        android:text="@string/back" />
+</LinearLayout>
