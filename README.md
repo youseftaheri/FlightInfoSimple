@@ -1,6 +1,6 @@
 <H1> Flight Schedule </H1>
 
-<B>(Using: Retrofit2 / Butterknife)</B>
+<B>(Using: Retrofit2 / EventBus / Butterknife)</B>
 
 This Android app gets list of airline schedules and display their origin and destination airports on a map.
 
