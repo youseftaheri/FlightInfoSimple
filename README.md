@@ -1,6 +1,6 @@
 <H1> Flight Schedule </H1>
 
-<B>(Using: MVP / Dagger / RxJava)</B>
+<B>(Using: Retrofit2 / Butterknife)</B>
 
 This Android app gets list of airline schedules and display their origin and destination airports on a map.
 
@@ -18,6 +18,6 @@ This Android app gets list of airline schedules and display their origin and des
  
  ●	And connect them with a polyline
  
- <img src="Screenshots/Screenshot_1.png" width="200"> <img src="Screenshots/Screenshot_2.png" width="200"> <img src="Screenshots/Screenshot_3.png" width="200"> <img src="Screenshots/Screenshot_4.png" width="200">
+ <img src="screenshots/Screenshot_1.png" width="200"> <img src="screenshots/Screenshot_2.png" width="200"> <img src="screenshots/Screenshot_3.png" width="200"> <img src="screenshots/Screenshot_4.png" width="200">
  
  </p>
